@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/CSS/cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/IMG/GLOBALCHIP.png" id="logo" alt="Logo GlobalChip">
+        </div>
+        <form id="form" action="">
+            <!-- Corrigindo a hierarquia dos cabeçalhos -->
+            <h3 class="h3_new_user">Bem vindo ao <span class="login"> Login</span></h3>
+            <p class="info_login">Preencha os dados do login para acessar</p>
+            <div class="emails">
+                <div class="usuario">
+                    <p class="label_email">Email</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="email" id="email" placeholder="Email"> <img id="profile" src="/IMG/person.png" alt="">
+                    <div class="line"></div>
+                </div>    
+                <div class="usuario">
+                    <p class="label_email">Confirmar Email</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="email" id="email" placeholder="Email"> <img id="profile" src="/IMG/person.png" alt="">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="usuario">
+                <p class="label_email">Senha</p>
+                <!-- Corrigindo o tipo de entrada para senha -->
+                <input type="password" name="password" id="password" placeholder="Senha"> <img id="profile" src="/IMG/visibility-off.png" alt="">
+                <div class="line"></div>
+            </div>
+            <div class="usuario">
+                <p class="label_email">Confirmar Senha</p>
+                <!-- Corrigindo o tipo de entrada para senha -->
+                <input type="password" name="password" id="password" placeholder="Senha"> <img id="profile" src="/IMG/visibility-off.png" alt="">
+                <div class="line"></div>
+                <!-- <p>Esqueceu a senha?</p> -->
+            </div>
+            <div class="button">
+                <button id="entrar_button"><span id="text_entrar">Entrar</span></button>
+            </div>
+            <div class="or">
+                <div class="line_left"></div>
+                <p id="text_or">OU</p>
+                <div class="line_right"></div>
+            </div>
+            <div class="tree_button">
+                <button id="button_redes"><img id="icon" src="/IMG/facebook.png" style="margin-right: 2.2px;" alt="">Facebook</button>
+                <button id="button_redes"><img id="icon" src="/IMG/google.png" alt="">Google</button>
+                <button id="button_redes"><img id="icon" src="/IMG/apple.png" alt="">Apple</button>
+            </div>
+            <div>
+                <p class="info_login">Novo na GlobalChip? <a id="text_cadastrar">Cadastrar</a></p>
+            </div>
+        </form>
+        <div id="polygon_clare"></div>
+        <div id="polygon_escure"></div>
+    </div>
+</body>
+</html>

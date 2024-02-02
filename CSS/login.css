@@ -1,0 +1,527 @@
+/* Importando a fonte */
+@import url('https://fonts.cdnfonts.com/css/poetsen-one');
+
+/* Estilos para o corpo do documento */
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vw;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100vw 100vw;
+    border-color: transparent transparent #00295372 transparent;
+    z-index: 1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    right: 0;
+    width: 20vw;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100vw 140vw;
+    border-color: transparent transparent #002953AD transparent;
+    z-index: 1;
+}
+
+input {
+    border: none;
+    border-style: none;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+}
+
+.line {
+    width: 289px;
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line_left,
+.line_right {
+    width: 289px;
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para o logotipo */
+#logo {
+    width: 130px;
+    height: 115px;
+    background: 50% / cover no-repeat;
+}
+
+/* Estilos para o polígono "clare" */
+#polygon_clare {
+    width: 1852.405px;
+    height: 1910.433px;
+    background-color: #002953AD;
+    transform: rotate(-135.43deg);
+    fill: rgba(0, 41, 83, 0.68);
+    filter: drop-shadow(0px 9px 15px rgba(0, 120, 240, 0.25));
+    position: absolute;
+    top: 0;
+    display: none;
+    left: 25%;
+}
+
+/* Estilos para o polígono "escure" */
+#polygon_escure {
+    width: 1652.405px;
+    height: 1910.433px;
+    background-color: #0029539a;
+    transform: rotate(-135.43deg);
+    fill: linear-gradient(180deg, rgba(0, 41, 83, 0.00) 13.5%, rgba(0, 41, 83, 0.68) 84%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    top: 0;
+    display: none;
+    left: 50%;
+}
+
+/* Estilos para o formulário */
+#form {
+    width: 60vw;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 1px 20px 0px rgba(0, 58, 117, 0.59);
+    z-index: 9999;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Estilos para textos */
+.h3_new_user,
+.login {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.login {
+    color: #0078F0;
+}
+
+.info_login {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.usuario {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+#profile {
+    position: relative;
+    justify-content: end;
+}
+
+#entrar_button {
+    background-color: #0078F0;
+    color: #FFF;
+    border: none;
+    width: 270px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+#text_entrar {
+    font-family: 'Poetsen One', sans-serif;
+    font-size: 15px;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#text_or {
+}
+
+#button_redes {
+    width: 150px;
+    height: 45px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: .1px solid rgba(0, 0, 0, 0.707);
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    margin-bottom: 20px;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+/* Aplique margem à direita apenas aos botões, exceto ao último */
+#button_redes:not(:last-child) {
+    margin-right: 10px;
+}
+
+.info_login {
+    font-family: 'Poetsen One', sans-serif;
+    font-weight: 500;
+}
+
+#text_cadastrar {
+    color: #0078F0;
+}
+
+#icon {
+    width: 25px;
+    vertical-align: middle;
+}
+
+#button_redes img {
+    margin-right: 5.5px;
+}
+
+@media screen and (max-width: 2560px) {
+    body {
+        font-size: 20px;
+    }
+    #form {
+        width: 26vw;
+        position: absolute;
+        left: 50vw;
+        top: 50vh;
+    }
+    .line {
+        width: 410px;
+    }
+    .line_left,
+    .line_right {
+        width: 270px;
+        height: 1px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .h3_new_user, .login {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .info_login {
+        font-family: "Public Sans", sans-serif;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+    input {
+        border: none;
+        border-style: none;
+        margin-bottom: 10px;
+        position: relative;
+        width: 378px;
+    }
+}
+
+@media screen and (max-width: 2295px) {
+    #form {
+        width: 36vw;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #form {
+        width: 40vw;
+    }
+
+    .h3_new_user,
+    .login {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .line {
+        width: 300px;
+    }
+    .line_left,
+    .line_right {
+        width: 180px;
+        height: 1px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     input {
+        border: none;
+        border-style: none;
+        margin-bottom: 10px;
+        position: relative;
+        width: 268px;
+    }
+}
+
+@media screen and (max-width: 1218px) {
+    #form {
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    #form {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body::after {
+        content: "";
+        position: absolute;
+        top: -60%;
+        right: 0;
+        width: 30vw;
+        height: 0;
+        border-style: solid;
+        border-width: 0px 0 100vw 100vw;
+        border-color: transparent transparent #002953AD transparent;
+        z-index: 1;
+    }
+
+    body {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    #button_redes {
+        width: 109px;
+    }
+}
+
+@media screen and (max-width: 839px) {
+
+    .line_left,
+    .line_right {
+        width: 156px;
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    body::after {
+        content: "";
+        position: absolute;
+        top: -172%;
+        right: 0;
+        width: 31vw;
+        height: 225px;
+        border-style: solid;
+        border-width: 0px 0 300vw 250vw;
+        border-color: transparent transparent #002953AD transparent;
+        z-index: 1;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: -10px;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 1400vw 1000vw;
+        border-color: transparent transparent #00295372 transparent;
+        z-index: 1;
+    }
+
+    #entrar_button {
+        width: 211px;
+    }
+
+    body {
+        font-size: 8px;
+    }
+
+    #button_redes {
+        width: 89px;
+        font-size: 10px;
+    }
+
+    #icon {
+        width: 13px;
+    }
+
+    #button_redes img {
+        margin-right: 2.5px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    #logo {
+        width: 100px;
+    }
+
+    #form {
+        width: 60vw;
+    }
+
+    .line_left,
+    .line_right {
+        width: 126px;
+    }
+
+    body::after {
+        content: "";
+        position: absolute;
+        top: -273%;
+        right: 0;
+        width: 30vw;
+        height: 225px;
+        border-style: solid;
+        border-width: 0px 0 300vw 250vw;
+        border-color: transparent transparent #002953AD transparent;
+        z-index: 1;
+    }
+
+    #logo {
+        width: 69px;
+        height: 69px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    #button_redes {
+        margin-right: 0;
+    }
+
+    #entrar_button {
+        background-color: #0078F0;
+        color: #FFF;
+        border: none;
+        width: 200px;
+        height: 41px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+
+    #button_redes {
+        width: 100px;
+        height: 33px;
+        margin-right: auto;
+        background-color: transparent;
+        border: 0.1px solid rgba(0, 0, 0, 0.707);
+        border-right: 4px solid black;
+        border-bottom: 4px solid black;
+        margin-bottom: 6px;
+        font-family: 'Poetsen One', sans-serif;
+        display: block;
+        margin-left: auto;
+    }
+
+    #button_redes:not(:last-child) {
+        margin-right: auto;
+    }
+
+    .h3_new_user,
+    .login {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .info_login {
+        font-size: 10px;
+    }
+
+    input {
+        border: none;
+        border-style: none;
+        margin-bottom: 10px;
+        position: relative;
+        width: 200px;
+    }
+
+    .line {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .line {
+        width: 200px;
+    }
+
+    input {
+        width: 180px;
+    }
+
+    #profile {
+        width: 20px;
+    }
+
+    .line_left,
+    .line_right {
+        width: 86px;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    #form {
+        top: 350px;
+        width: 80vw;
+    }
+    .line {
+        width: 170px;
+    }
+
+    input {
+        width: 150px;
+    }
+    .info_login {
+        font-size: 8px;
+    }
+    #entrar_button {
+        width: 140px;
+        height: 33px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #form {
+        top: 350px;
+        width: 80vw;
+    }
+    .line {
+        width: 140px;
+    }
+
+    input {
+        width: 110px;
+    }
+    .info_login {
+        font-size: 8px;
+    }
+    #entrar_button {
+        width: 140px;
+        height: 33px;
+    }
+}
