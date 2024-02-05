@@ -207,19 +207,188 @@ input {
 
 @media screen and (max-width: 2560px) {
     #form{
-        width: 30vw;
+        width: 60vw;
     }
+    .usuario {
+        display: inline-block;
+        text-align: left;
+        margin-right: 25px;
+    }
+    .line_left,
+    .line_right {
+        width: 369px;
+        height: 1px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 @media screen and (max-width: 1440px) {
     #form{
-        width: 46vw;
-    }
-}
-@media screen and (max-width: 1024px) {
-    #form{
         width: 56vw;
     }
+    .line_left,
+    .line_right {
+        width: 339px;
+        height: 1px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1287px) {
+    .line_left,
+    .line_right {
+        width: 280px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .usuario {
+        display: inline-block;
+        text-align: left;
+        margin-right: 15px;
+    }
+    #form{
+        width: 63vw;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    #form{
+        width: 68vw;
+    }
+    .usuario {
+        margin-right: 5px;
+    }
+    #logo {
+        width: 90px;
+        height: 90px;
+        background: 50% / cover no-repeat;
+    }
+}
+@media screen and (max-width: 888px) {
+    #form{
+        width: 74vw;
+        font-size: 10px;
+    }
+    #icon{
+        width: 16px;
+    }
+    input{
+        width: 200px;
+    }
+    .line{
+        width: 230px;
+    }
+    .line_left,
+    .line_right {
+        width: 250px;
+    }
+    #profile{
+        width: 18px;
+    }
+}
+@media screen and (max-width: 718px) {
+    .line_left,
+    .line_right {
+        width: 220px;
+    }
+    body::after {
+        content: "";
+        position: absolute;
+        top: -272%;
+        right: 0;
+        width: 31vw;
+        height: 225px;
+        border-style: solid;
+        border-width: 0px 0 300vw 250vw;
+        border-color: transparent transparent #002953AD transparent;
+        z-index: 1;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: -10px;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 1400vw 1000vw;
+        border-color: transparent transparent #00295372 transparent;
+        z-index: 1;
+    }
+}
+@media screen and (max-width: 655px) {
+    #button_redes {
+        width: 100px;
+        margin-right: 0px;
+    }
+    .line {
+        width: 190px;
+    }
+    .line_left,
+    .line_right {
+        width: 180px;
+    }
+    #entrar_button {
+        background-color: #0078F0;
+        color: #FFF;
+        border: none;
+        width: 226px;
+        height: 50px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+    input {
+        width: 158px;
+    }
+}
+@media screen and (max-width: 529px) {
+    .h3_new_user, .login{
+        font-size: 15px;
+    }
+    .info_login{
+        font-size: 10px;
+    }
+    input {
+        width: 120px;
+    }
+    .usuario {
+        margin-right: 5px;
+    }
+    .line_left,
+    .line_right,
+    .line {
+        width: 150px;
+    }
+}
+@media screen and (max-width: 439px) {
+    #button_redes {
+        width: 80px;
+        font-size: 9px;
+    }
+    .line_left,
+    .line_right,
+    .line {
+        width: 120px;
+    }
+    input{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    #form {
+        width: 90vw;
+        font-size: 10px;
+    }    
 }
 
 

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../CSS/perfil.css">
+
+</head>
+
+<body>
+    <nav>
+        <div id="div_nav"><img id="logo" src="../IMG/GLOBALCHIP.png" alt=""></div>
+        <div id="div_buttons">
+            <div id="div_white"><img href="#" src="../IMG/Notification.png"></div>
+            <div id="div_white"><img href="#" src="../IMG/Settings.png"></div>
+            <div id="div_white"><img href="#" id="foto_perfil" src="../IMG/Pessoa.jpg" alt=""></div>
+        </div>
+    </nav>
+    <main>
+        <div id="nav_lateral">
+            <div class="sidenav">
+                <button class="dropdown-btn"><img id="img_icon" src="../IMG/perfil.png">Conta
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="./Perfil.html">Perfil</a>
+                    <a onclick="cartao()">Cartões</a>
+                    <a onclick="endereco()">Endereço</a>
+                </div>
+                <a onclick="compra()"><img id="img_icon" src="../IMG/carrinho.png">Compras</a>
+            </div>
+        </div>
+        <div class="base">
+            <div id="dados">
+                <div class="usuario">
+                    <p class="label_email">Nome de usuário</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="Nome de usuário" id="nome_usuario" placeholder="Nome de usuário">
+                    <div class="line"></div>
+                </div>
+                <div class="usuario">
+                    <p class="label_email">Nome</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="Nome" id="Nome" placeholder="Nome">
+                    <div class="line"></div>
+                </div>
+                <div class="usuario">
+                    <p class="label_email">Email</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <div class="line"></div>
+                </div>
+                <div class="usuario">
+                    <p class="label_email">Número de telefone</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="numero_telefone" id="numero_telefone" placeholder="Número de telefone">
+                    <div class="line"></div>
+                </div>
+                <div class="usuario">
+                    <p class="label_email">Data Nascimento</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="Date" name="Data Nascimento" id="Data Nascimento" placeholder="Data Nascimento">
+                    <div class="line"></div>
+                </div>
+                <div class="usuario">
+                    <p class="label_email">Cpf</p>
+                    <!-- Adicionando atributos name aos campos de entrada -->
+                    <input type="text" name="Cpf" id="Cpf" placeholder="Cpf">
+                    <div class="line"></div>
+                </div>
+                <div class="cartoes">
+                    <div>
+                        <h1>Cartões</h1>
+                    </div>
+                    <div id="card_cartão">
+                        <div><img src="../IMG/mastercard.png" width="100" alt=""></div>
+                        <div>
+                            <p>Nome Cartão</p>
+                        </div>
+                        <div>
+                            <p>190381023-12</p>
+                        </div>
+                        <div><button id="excluir">Excluir</button></div>
+                    </div>
+                    <button id="button_adicionar" onclick="abrirModal()">Adicionar Cartão</button>
+                </div>
+                <div class="endereco">
+                    <div>
+                        <h1>Endereço</h1>
+                    </div>
+                    <div id="card_cartão">
+                        <div><img src="../IMG/house.png" width="50" alt=""></div>
+                        <div>
+                            <p>Rua das flores 165</p>
+                        </div>
+                        <div>
+                            <p>11111-111</p>
+                        </div>
+                        <div><button id="excluir">Excluir</button></div>
+                        <div><button id="excluir">Editar</button></div>
+                    </div>
+                    <button id="button_adicionar" onclick="abrirModal()">Adicionar Endereço</button>
+                </div>
+                <div class="class_compras">
+                    <nav>
+                        <div class="button_nav"><button class="button_nav_compras">Tudo</button></div>
+                        <div class="button_nav"><button class="button_nav_compras">A Pagar</button></div>
+                        <div class="button_nav"><button class="button_nav_compras">Preparando</button></div>
+                        <div class="button_nav"><button class="button_nav_compras">A Caminho</button></div>
+                        <div class="button_nav"><button class="button_nav_compras">Finalizado</button></div>
+                        <div class="button_nav"><button class="button_nav_compras">Cancelado</button></div>
+                        <div class="button_nav"><button class="button_nav_compras">Devolução</button></div>
+                    </nav>
+                    <div class="div_scroll">
+                        <div class="cardCompra">
+                            <div class="teste"><img src="../IMG/esponjaDeAco.jpg" alt=""> </div>
+                            <div class="teste"><p id="nome_produto">Esponja de aço</p><span>x2</span></div>
+                            <div class="teste"><p id="status">Em Preparo</p></div>
+                            <div class="teste">
+                                <p id="preco">Preço : <span>R$200.00</span></p>
+                                <p id="total">Total : <span>R$400.00</span></p>
+                            </div>
+                        </div>
+                        <div class="cardCompra">
+                            <div class="teste"><img src="../IMG/mastercard.png" alt=""> </div>
+                            <div class="teste"><p id="nome_produto">Nome Produto bom demais <p>x2</p></p></div>
+                            <div class="teste"><p id="status">Em Preparo</p></div>
+                            <div class="teste">
+                                <p id="preco">Preço : <span>R$200.00</span></p>
+                                <p id="total">Total : <span>R$400.00</span></p>
+                            </div>
+                        </div>
+                        <div class="cardCompra">
+                            <div class="teste"><img src="../IMG/mastercard.png" alt=""> </div>
+                            <div class="teste"><p id="nome_produto">Nome Produto bom demais <p>x2</p></p></div>
+                            <div class="teste"><p id="status">Em Preparo</p></div>
+                            <div class="teste">
+                                <p id="preco">Preço : <span>R$200.00</span></p>
+                                <p id="total">Total : <span>R$400.00</span></p>
+                            </div>
+                        </div>
+                        <div class="cardCompra">
+                            <div class="teste"><img src="../IMG/mastercard.png" alt=""> </div>
+                            <div class="teste"><p id="nome_produto">Nome Produto bom demais <p>x2</p></p></div>
+                            <div class="teste"><p id="status">Em Preparo</p></div>
+                            <div class="teste">
+                                <p id="preco">Preço : <span>R$200.00</span></p>
+                                <p id="total">Total : <span>R$400.00</span></p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div id="foto_editar">
+                <img id="foto_perfil_div" src="../IMG/Pessoa.jpg" alt="">
+                <input type="file" id="selecionar-imagem" accept="image/*" style="display: none;">
+                <div id="editar_foto"><img id="camera" onclick="selecionarImagem()" src="../IMG/camera.png" alt=""></div>
+            </div>
+            <button id="button_salvar">Salvar</button>
+            <div class="modal_cartao">
+                <div class="modal_conteudo">
+                    <span class="fechar_modal" onclick="fecharModal()">&times;</span>
+                    <div class="sessao_modal">
+                        <div>
+                            <h1>Cartão</h1>
+                        </div>
+                        <div class="usuario_cartao">
+                            <p class="label_email">Número Do Cartão</p>
+                            <input type="text" name="Nome de usuário" id="nome_usuario" placeholder="Número Do Cartão">
+                            <div class="line"></div>
+                        </div>
+                        <div class="usuario_cartao">
+                            <p class="label_email">Nome do Cartão</p>
+                            <input type="text" name="Nome Cartão" id="nome_Cartão" placeholder="Nome Do Cartão">
+                            <div class="line"></div>
+                        </div>
+                        <div class="usuario_cartao">
+                            <p class="label_email">Data Expiracao</p>
+                            <input type="Date" name="Data Expiracao" id="nome_usuario" placeholder="Data Expiracao">
+                            <div class="line"></div>
+                        </div>
+                        <div class="usuario_cartao">
+                            <p class="label_email">CVV</p>
+                            <input type="text" minlength="3" maxlength="3" name="Nome de usuário" id="nome_usuario"
+                                placeholder="Nome de usuário">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Endereço</h1>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">CEP</p>
+                        <input type="text" name="CEP" id="nome_usuario" placeholder="CEP">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Bairro</p>
+                        <input type="text" name="Bairro" id="nome_usuario" placeholder="Bairro">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Estado</p>
+                        <input type="text" name="Estado" id="nome_usuario" placeholder="Estado">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Cidade</p>
+                        <input type="text" name="Cidade" id="nome_usuario" placeholder="Cidade">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Rua/Avenida</p>
+                        <input type="text" name="Rua/Avenida" id="nome_usuario" placeholder="Rua/Avenida">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Número</p>
+                        <input type="text" name="Número" id="nome_usuario" placeholder="Número">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Complemento</p>
+                        <input type="text" name="Complemento" id="nome_usuario" placeholder="Complemento">
+                        <div class="line"></div>
+                    </div>
+                    <div class="usuario_cartao">
+                        <p class="label_email">Adicional</p>
+                        <input type="text" name="Adicional" id="nome_usuario" placeholder="Adicional">
+                        <div class="line"></div>
+                    </div>
+
+                    <div id="div_adicionar"><button id="button_adicionar">Adicionar</button></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function selecionarImagem() {
+            document.getElementById('selecionar-imagem').click();
+        }
+    
+        document.getElementById('selecionar-imagem').addEventListener('change', function () {
+            var arquivo = this.files[0];
+            if (arquivo) {
+                var leitor = new FileReader();
+                leitor.onload = function () {
+                    document.getElementById('foto_perfil_div').src = leitor.result;
+                }
+                leitor.readAsDataURL(arquivo);
+            }
+        });
+    
+        function ocultarElementos(classe) {
+            var elementos = document.getElementsByClassName(classe);
+            for (var i = 0; i < elementos.length; i++) {
+                elementos[i].style.display = 'none';
+            }
+        }
+    
+        function exibirElementos(classe) {
+            var elementos = document.getElementsByClassName(classe);
+            for (var i = 0; i < elementos.length; i++) {
+                elementos[i].style.display = 'inline';
+            }
+        }
+    
+        function cartao() {
+            ocultarElementos('button_nav_compras');
+            ocultarElementos('class_compras');
+            ocultarElementos('usuario');
+            exibirElementos('cartoes');
+            ocultarElementos('endereco');
+        }
+    
+        function endereco() {
+            ocultarElementos('button_nav_compras');
+            ocultarElementos('usuario');
+            ocultarElementos('cartoes');
+            exibirElementos('endereco');
+        }
+    
+        function compra() {
+            ocultarElementos('usuario');
+            ocultarElementos('cartoes');
+            ocultarElementos('endereco');
+            ocultarElementos('class_compras');
+    
+            document.getElementById('foto_editar').style.display = 'none';
+            document.getElementById('button_salvar').style.display = 'none';
+            document.getElementById('foto_editar').style.width = '0px';
+            document.getElementById('dados').style.width = '100%';
+            
+            exibirElementos('button_nav_compras');
+            exibirElementos('class_compras');
+        }
+    
+        function abrirModal() {
+            document.querySelector('.modal_cartao').style.display = 'block';
+        }
+    
+        function fecharModal() {
+            document.querySelector('.modal_cartao').style.display = 'none';
+        }
+    </script>
+    
+</body>
+
+</html>
