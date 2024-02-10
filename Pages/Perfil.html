@@ -14,8 +14,17 @@
         <div id="div_nav"><img id="logo" src="../IMG/GLOBALCHIP.png" alt=""></div>
         <div id="div_buttons">
             <div id="div_white"><img href="#" src="../IMG/Notification.png"></div>
-            <div id="div_white"><img href="#" src="../IMG/Settings.png"></div>
-            <div id="div_white"><img href="#" id="foto_perfil" src="../IMG/Pessoa.jpg" alt=""></div>
+            <div class="dropdown">
+                <!-- <button onclick="myFunction()" class="dropbtn">Dropdown</button> -->
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="./Perfil.html">Perfil</a>
+                  <a href="#about" onclick="cartao()">Cartões</a>
+                  <a onclick="endereco()">Endereço</a>
+                  <a onclick="compra()">Compras</a>
+                </div>
+              </div>
+             <div id="div_white"><img href="#" onclick="myFunction()" class="dropbtn" src="../IMG/Settings.png"></div> 
+             <div id="div_white"><img href="#" id="foto_perfil" src="../IMG/Pessoa.jpg" alt=""></div>
         </div>
     </nav>
     <main>
@@ -98,7 +107,6 @@
                         <div>
                             <p>11111-111</p>
                         </div>
-                        <div><button id="excluir">Excluir</button></div>
                         <div><button id="excluir">Editar</button></div>
                     </div>
                     <button id="button_adicionar" onclick="abrirModal()">Adicionar Endereço</button>
@@ -153,7 +161,7 @@
                     </div>    
                 </div>
             </div>
-            <div id="foto_editar">
+            <div id="foto_editar" class="foto_editar">
                 <img id="foto_perfil_div" src="../IMG/Pessoa.jpg" alt="">
                 <input type="file" id="selecionar-imagem" accept="image/*" style="display: none;">
                 <div id="editar_foto"><img id="camera" onclick="selecionarImagem()" src="../IMG/camera.png" alt=""></div>
@@ -164,7 +172,7 @@
                     <span class="fechar_modal" onclick="fecharModal()">&times;</span>
                     <div class="sessao_modal">
                         <div>
-                            <h1>Cartão</h1>
+                            <h1 id="center_h1">Cartão</h1>
                         </div>
                         <div class="usuario_cartao">
                             <p class="label_email">Número Do Cartão</p>
@@ -239,75 +247,104 @@
         </div>
     </main>
 
-    <script>
-        function selecionarImagem() {
-            document.getElementById('selecionar-imagem').click();
-        }
-    
-        document.getElementById('selecionar-imagem').addEventListener('change', function () {
-            var arquivo = this.files[0];
-            if (arquivo) {
-                var leitor = new FileReader();
-                leitor.onload = function () {
-                    document.getElementById('foto_perfil_div').src = leitor.result;
-                }
-                leitor.readAsDataURL(arquivo);
-            }
-        });
-    
-        function ocultarElementos(classe) {
-            var elementos = document.getElementsByClassName(classe);
-            for (var i = 0; i < elementos.length; i++) {
-                elementos[i].style.display = 'none';
-            }
-        }
-    
-        function exibirElementos(classe) {
-            var elementos = document.getElementsByClassName(classe);
-            for (var i = 0; i < elementos.length; i++) {
-                elementos[i].style.display = 'inline';
-            }
-        }
-    
-        function cartao() {
-            ocultarElementos('button_nav_compras');
-            ocultarElementos('class_compras');
-            ocultarElementos('usuario');
-            exibirElementos('cartoes');
-            ocultarElementos('endereco');
-        }
-    
-        function endereco() {
-            ocultarElementos('button_nav_compras');
-            ocultarElementos('usuario');
-            ocultarElementos('cartoes');
-            exibirElementos('endereco');
-        }
-    
-        function compra() {
-            ocultarElementos('usuario');
-            ocultarElementos('cartoes');
-            ocultarElementos('endereco');
-            ocultarElementos('class_compras');
-    
-            document.getElementById('foto_editar').style.display = 'none';
-            document.getElementById('button_salvar').style.display = 'none';
-            document.getElementById('foto_editar').style.width = '0px';
-            document.getElementById('dados').style.width = '100%';
-            
-            exibirElementos('button_nav_compras');
-            exibirElementos('class_compras');
-        }
-    
-        function abrirModal() {
-            document.querySelector('.modal_cartao').style.display = 'block';
-        }
-    
-        function fecharModal() {
-            document.querySelector('.modal_cartao').style.display = 'none';
-        }
-    </script>
-    
 </body>
 
-</html>
+
+<script>
+    function selecionarImagem() {
+        document.getElementById('selecionar-imagem').click();
+    }
+
+    document.getElementById('selecionar-imagem').addEventListener('change', function () {
+        var arquivo = this.files[0];
+        if (arquivo) {
+            var leitor = new FileReader();
+            leitor.onload = function () {
+                document.getElementById('foto_perfil_div').src = leitor.result;
+            }
+            leitor.readAsDataURL(arquivo);
+        }
+    });
+
+    function ocultarElementos(classe) {
+        var elementos = document.getElementsByClassName(classe);
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].style.display = 'none';
+        }
+    }
+
+    function exibirElementos(classe) {
+        var elementos = document.getElementsByClassName(classe);
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].style.display = 'inline';
+        }
+    }
+
+    function cartao() {
+        ocultarElementos('button_nav_compras');
+        ocultarElementos('class_compras');
+        ocultarElementos('foto_editar');
+        ocultarElementos('usuario');
+        exibirElementos('cartoes');
+        ocultarElementos('endereco');
+        exibirElementos('sessao_modal');
+
+        document.getElementById('button_salvar').style.display = 'inline';
+        document.getElementById('dados').style.width = '100vw';     
+        document.getElementById('foto_editar').style.display = 'none';
+
+    }
+
+    function endereco() {
+        ocultarElementos('button_nav_compras');
+        ocultarElementos('usuario');
+        ocultarElementos('foto_editar');
+        ocultarElementos('cartoes');
+        ocultarElementos('class_compras');
+        ocultarElementos('sessao_modal');
+        exibirElementos('endereco');
+        document.getElementById('dados').style.width = '100vw';     
+        document.getElementById('button_salvar').style.display = 'inline';
+        document.getElementById('foto_editar').style.display = 'none';
+
+    }
+
+    function compra() {
+        ocultarElementos('usuario');
+        ocultarElementos('cartoes');
+        ocultarElementos('endereco');
+        ocultarElementos('class_compras');
+
+        document.getElementById('foto_editar').style.display = 'none';
+        document.getElementById('button_salvar').style.display = 'none';
+        document.getElementById('dados').style.width = '100%';
+        
+        exibirElementos('button_nav_compras');
+        exibirElementos('class_compras');
+    }
+
+    function abrirModal() {
+        document.querySelector('.modal_cartao').style.display = 'block';
+    }
+
+    function fecharModal() {
+        document.querySelector('.modal_cartao').style.display = 'none';
+    }
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+</script>
