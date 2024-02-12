@@ -43,7 +43,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+input{
+    background-color: transparent;
+    outline: none;
+}
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -155,6 +158,22 @@ code {
 
     .lg\:hide {
         display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .lg\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lg\:hide {
+        display: none;
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        width: 88em;
     }
 }
 
