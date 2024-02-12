@@ -12,7 +12,6 @@
   height: 480px;
   left: 0px;
   position: absolute;
-  width: 1440px;
 }
 .produto .title {
   align-items: center;
@@ -148,7 +147,6 @@
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 1440px;
 }
 .produto .rect1 {
   background-color: white;
@@ -218,7 +216,6 @@
   position: absolute;
   right: 0px;
   top: 124px;
-  width: 1440px;
 }
 .produto .rect3 {
   background-color: rgba(53, 99, 233, 0.2);
@@ -475,6 +472,7 @@
   right: 663px;
   top: 620px;
   width: 75px;
+  text-decoration: line-through;
 }
 .produto .rect5 {
   background-color: #3563e9;
@@ -592,18 +590,20 @@
   width: 116px;
 }
 .produto .text31 {
+  top: 783.5px;
   align-items: center;
+  bottom: 1667.5px;
   color: #90a3bf;
   display: flex;
   font: 500 14px/1.5 "Plus Jakarta Sans", Helvetica, Arial, serif;
   height: 21px;
   justify-content: flex-end;
+  left: 1209px;
   letter-spacing: -0.29px;
   position: absolute;
   right: 154px;
   text-align: right;
-  top: 783.5px;
-  width: 77px;
+  width: 80px;
 }
 .produto .image51 {
   bottom: 1784px;
@@ -801,4 +801,10 @@
   right: 889px;
   top: 178px;
   width: 324px;
+}
+
+@media screen and (max-width:1024px) {
+  html{
+    width: 86em;
+  }
 }
